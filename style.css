@@ -31,6 +31,8 @@ body {
 
 main {
     width: 90%;
+    max-width: calc(375px*0.9);
+    min-width: calc(375px*0.9);
     height: auto;
     background-color: white;
     border-radius: 1.2rem;
@@ -68,14 +70,19 @@ main {
     color: var(--desaturated-dark-blue);
 }
 
-.profile-box{
-    width: 75%;
+
+.profile-box, .profile-box-container {
+    width: 100%;
     height: 70px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.profile-box {
+    width: 75%;
 }
 
 .profile-box img {
@@ -114,14 +121,13 @@ main {
     background-color: var(--light-grayish-blue);
 }
 
-.share-box, .share-box-container {
+.share-box, .share-box-container  {
     width: 100%;
     height: 70px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding-bottom: 2rem; */
     border-radius: 0 0 1.2rem 1.2rem;
     background-color: var(--very-dark-grayish-blue);
 }
@@ -132,7 +138,6 @@ main {
 
 .social-icons {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -153,6 +158,10 @@ main {
     background-color: var(--grayish-blue);
 }
 
+button {
+    cursor: pointer;
+}
+
 footer { 
     font-size: 1.1rem; 
     text-align: center; 
@@ -165,4 +174,88 @@ footer a {
 
 .inactive {
     display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+    main {
+        width: 70%;
+        height: 350px;
+        max-width: 1440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image {
+        width: 68%;
+        height: 100%;
+        background-position: left;
+        border-radius: 1.2rem 0 0 1.2rem;
+    }
+
+    .main-box {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .main-body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-box h1 {
+        font-size: 2.7rem;
+        line-height: 4rem;
+        font-weight: 700;
+        color: var(--very-dark-grayish-blue);
+        margin-bottom: 2rem;
+    }
+    
+    .main-box p {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        font-weight: 500;
+        color: var(--desaturated-dark-blue);
+    }
+
+    .share-box, .share-box-container  {
+        width: 220px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1rem;
+        background-color: var(--very-dark-grayish-blue);
+    }
+    
+    .share-box-container {
+        width: 75%;
+    }
+    
+    .social-icons {
+        display: flex;
+        align-items: center;
+    }
+    
+    .social-icons p {
+        font-size: 1.3rem;
+        color: white;
+        font-weight: 200;
+        letter-spacing: 0.5rem;
+        color: var(--light-grayish-blue);
+        margin-right: 1rem;
+    }
+    
+    .social-icons span {
+        margin-left: 1.2rem;
+    }
+    
+    .share-box button {
+        display: none;
+        background-color: var(--grayish-blue);
+    }
 }
