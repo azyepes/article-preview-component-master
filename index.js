@@ -8,12 +8,12 @@ let bodyWidth = document.getElementsByTagName('body')[0].clientWidth
 
 shareButton.addEventListener('click', () => {
 
-    if (bodyWidth === 1440) {
-
+    if (bodyWidth != 1440) {
+        profileBox.classList.add('inactive')
         shareBox.classList.remove('inactive')
     } else {
         shareBox.classList.remove('inactive')
-        profileBox.classList.add('inactive')
+        
     }
     
 })
